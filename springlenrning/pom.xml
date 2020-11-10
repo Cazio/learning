@@ -44,10 +44,10 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.caizo</groupId>
-            <artifactId>autoconfiguration</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.caizo</groupId>-->
+<!--            <artifactId>autoconfiguration</artifactId>-->
+<!--        </dependency>-->
     </dependencies>
 
     <build>

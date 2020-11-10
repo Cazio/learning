@@ -10,9 +10,9 @@
  * <p>
  * ©2020 福建慧政通信息科技有限公司
  */
-package com.cazio.springlenrning.overview.container;
+package com.cazio.springlenrning.ioc.overview.dependency.lookup;
 
-import com.cazio.springlenrning.overview.domain.User;
+import com.cazio.springlenrning.ioc.overview.dependency.domain.User;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -30,6 +30,7 @@ import java.util.Map;
  * ──────────────────────────────────────────
  */
 public class AnnotationApplicationContextDemo {
+
     public static void main(String[] args) {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
         applicationContext.register(AnnotationConfigApplicationContext.class);

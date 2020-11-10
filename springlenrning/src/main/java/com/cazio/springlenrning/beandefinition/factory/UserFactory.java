@@ -1,8 +1,7 @@
 package com.cazio.springlenrning.beandefinition.factory;
 
-import com.cazio.springlenrning.overview.domain.User;
+import com.cazio.springlenrning.ioc.overview.dependency.domain.User;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
 
 /**
  * @auther kecz

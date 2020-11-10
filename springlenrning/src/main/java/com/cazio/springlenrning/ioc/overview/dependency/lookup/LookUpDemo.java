@@ -10,10 +10,10 @@
  * <p>
  * ©2020 福建慧政通信息科技有限公司
  */
-package com.cazio.springlenrning.overview.container;
+package com.cazio.springlenrning.ioc.overview.dependency.lookup;
 
-import com.cazio.springlenrning.overview.annotation.Super;
-import com.cazio.springlenrning.overview.domain.User;
+import com.cazio.springlenrning.ioc.overview.dependency.annotation.Super;
+import com.cazio.springlenrning.ioc.overview.dependency.domain.User;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.ObjectFactory;
@@ -31,7 +31,7 @@ import java.util.Map;
  * V1.0.0   2020/3/24   Cazio     初版
  * ──────────────────────────────────────────
  */
-public class OverViewDemo {
+public class LookUpDemo {
     public static void main(String[] args) {
         DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanFactory);
@@ -45,7 +45,7 @@ public class OverViewDemo {
 
     private static void lookupByAnnotation(BeanFactory beanFactory) {
         if (beanFactory instanceof ListableBeanFactory) {
-            Map<String,User> map =(Map)((ListableBeanFactory) beanFactory).getBeansWithAnnotation(Super.class);
+            Map<String, User> map = (Map) ((ListableBeanFactory) beanFactory).getBeansWithAnnotation(Super.class);
             System.out.println(map);
         }
     }
@@ -58,7 +58,14 @@ public class OverViewDemo {
         }
     }
 
+    /**
+     * 延迟查找
+     *
+     * @param beanFactory
+     */
     private static void lookupInlazy(BeanFactory beanFactory) {
+        //FactoryBean实时加载
+        //ObjectFactory 延迟加载
         ObjectFactory<User> objectFactory = (ObjectFactory<User>) beanFactory.getBean("objectFactory");
         User user = objectFactory.getObject();
         System.out.println("延迟查找:" + user);

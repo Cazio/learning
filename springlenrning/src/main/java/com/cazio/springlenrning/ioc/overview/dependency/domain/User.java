@@ -10,7 +10,7 @@
  * <p>
  * ©2020 福建慧政通信息科技有限公司
  */
-package com.cazio.springlenrning.overview.domain;
+package com.cazio.springlenrning.ioc.overview.dependency.domain;
 
 import lombok.Data;
 import lombok.ToString;

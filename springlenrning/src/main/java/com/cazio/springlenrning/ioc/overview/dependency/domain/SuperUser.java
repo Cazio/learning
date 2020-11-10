@@ -10,9 +10,9 @@
  * <p>
  * ©2020 福建慧政通信息科技有限公司
  */
-package com.cazio.springlenrning.overview.domain;
+package com.cazio.springlenrning.ioc.overview.dependency.domain;
 
-import com.cazio.springlenrning.overview.annotation.Super;
+import com.cazio.springlenrning.ioc.overview.dependency.annotation.Super;
 import lombok.Data;
 import lombok.ToString;
 

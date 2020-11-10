@@ -10,7 +10,7 @@
  * <p>
  * ©2020 福建慧政通信息科技有限公司
  */
-package com.cazio.springlenrning.ioc;
+package com.cazio.springlenrning.ioc.java.beans;
 
 import java.beans.BeanInfo;
 import java.beans.IntrospectionException;
@@ -29,19 +29,20 @@ import java.util.stream.Stream;
  */
 public class Runnner {
     public static void main(String[] args) throws IntrospectionException {
+//        BeanInfo info = Introspector.getBeanInfo(Person.class);
         BeanInfo beanInfo = Introspector.getBeanInfo(Person.class, Object.class);
 
         Stream.of(beanInfo.getPropertyDescriptors())
                 .forEach(propertyDescriptor -> {
                     System.out.println(propertyDescriptor);
                     Class<?> propertyName = propertyDescriptor.getPropertyType();
-                    if("age".equals(propertyName) ){
+                    if ("age".equals(propertyDescriptor.getName())) {
                         propertyDescriptor.setPropertyEditorClass(StringToIntegerPropertyEditor.class);
                     }
                 });
     }
 
-    static class StringToIntegerPropertyEditor extends PropertyEditorSupport{
+    static class StringToIntegerPropertyEditor extends PropertyEditorSupport {
         @Override
         public void setAsText(String text) throws IllegalArgumentException {
             setValue(Integer.parseInt(text));

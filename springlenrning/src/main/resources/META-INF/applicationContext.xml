@@ -5,15 +5,15 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="user" class="com.cazio.springlenrning.overview.domain.User">
+    <bean id="user" class="com.cazio.springlenrning.ioc.overview.dependency.domain.User">
         <property name="id" value="1"/>
         <property name="name" value="用户"/>
     </bean>
 
-    <bean id="superUser" class="com.cazio.springlenrning.overview.domain.SuperUser" parent="user">
+    <bean id="superUser" class="com.cazio.springlenrning.ioc.overview.dependency.domain.SuperUser" parent="user">
         <property name="role" value="superMan"/>
     </bean>
-
+    <!--延迟查找-->
     <bean id="objectFactory" class="org.springframework.beans.factory.config.ObjectFactoryCreatingFactoryBean">
         <property name="targetBeanName" value="user"/>
     </bean>

@@ -10,7 +10,7 @@
  * <p>
  * ©2020 福建慧政通信息科技有限公司
  */
-package com.cazio.springlenrning.overview.annotation;
+package com.cazio.springlenrning.ioc.overview.dependency.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
