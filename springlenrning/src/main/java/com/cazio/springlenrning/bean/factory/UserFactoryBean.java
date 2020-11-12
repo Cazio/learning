@@ -1,6 +1,6 @@
-package com.cazio.springlenrning.beandefinition.factory;
+package com.cazio.springlenrning.bean.factory;
 
-import com.cazio.springlenrning.beandefinition.User;
+import com.cazio.springlenrning.bean.User;
 import org.springframework.beans.factory.FactoryBean;
 
 /**

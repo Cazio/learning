@@ -1,7 +1,6 @@
-package com.cazio.springlenrning.beandefinition.factory;
+package com.cazio.springlenrning.bean.factory;
 
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;

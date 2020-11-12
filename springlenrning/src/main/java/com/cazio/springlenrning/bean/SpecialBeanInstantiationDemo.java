@@ -1,17 +1,12 @@
-package com.cazio.springlenrning.beandefinition;
+package com.cazio.springlenrning.bean;
 
-import com.cazio.springlenrning.beandefinition.factory.DefaultUserFactory;
-import com.cazio.springlenrning.beandefinition.factory.UserFactory;
-import javafx.concurrent.Service;
+import com.cazio.springlenrning.bean.factory.DefaultUserFactory;
+import com.cazio.springlenrning.bean.factory.UserFactory;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
-import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.config.SingletonBeanRegistry;
-import org.springframework.beans.factory.serviceloader.ServiceLoaderFactoryBean;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Import;
-import org.springframework.stereotype.Component;
 
 import java.util.Iterator;
 import java.util.ServiceLoader;

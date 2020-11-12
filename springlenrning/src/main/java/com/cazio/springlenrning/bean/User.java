@@ -1,4 +1,4 @@
-package com.cazio.springlenrning.beandefinition;
+package com.cazio.springlenrning.bean;
 
 import lombok.Data;
 

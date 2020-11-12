@@ -1,5 +1,6 @@
-package com.cazio.springlenrning.beandefinition;
+package com.cazio.springlenrning.bean;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.beans.factory.support.BeanDefinitionReaderUtils;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
@@ -22,7 +23,7 @@ public class AnnotationBeanDefinitionDemo {
     public static void main(String[] args) {
         //1创建BeanFactory容器
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
-//        applicationContext.register(AnnotationBeanDefinitionDemo.class);
+//        applicationContext.register(Config.class);
         registerBeanDefinition(applicationContext,"abc_user");
         registerBeanDefinition(applicationContext);
         applicationContext.refresh();

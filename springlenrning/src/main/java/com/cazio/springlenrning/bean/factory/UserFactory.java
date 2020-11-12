@@ -1,4 +1,4 @@
-package com.cazio.springlenrning.beandefinition.factory;
+package com.cazio.springlenrning.bean.factory;
 
 import com.cazio.springlenrning.ioc.overview.dependency.domain.User;
 import org.springframework.context.annotation.Configuration;

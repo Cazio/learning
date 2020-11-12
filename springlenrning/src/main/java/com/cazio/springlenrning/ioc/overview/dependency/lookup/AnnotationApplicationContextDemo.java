@@ -33,9 +33,12 @@ public class AnnotationApplicationContextDemo {
 
     public static void main(String[] args) {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
+        //将当前类作为配置Configuration配置类进行配置
         applicationContext.register(AnnotationConfigApplicationContext.class);
+        //启动并刷新上下文
         applicationContext.refresh();
         lookupCollectionByType(applicationContext);
+        //关闭
         applicationContext.close();
     }
 
